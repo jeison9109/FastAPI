@@ -4,3 +4,15 @@ py -m venv venv
 # Activamos entorno virtual
 .\venv\Scripts\activate
 
+
+# Crear page
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/')
+
+def message():
+    return "Hello, world!"
+
+# Luego ejecutar uvicorn main:app
