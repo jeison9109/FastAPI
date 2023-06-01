@@ -1,0 +1,6 @@
+# Creamos el entorno virutal
+py -m venv venv
+
+# Activamos entorno virtual
+.\venv\Scripts\activate
+
