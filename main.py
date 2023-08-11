@@ -1,11 +1,18 @@
 from fastapi import FastAPI
+<<<<<<< HEAD
 from fastapi.responses import HTMLResponse,JSONResponse
 from pydantic import BaseModel, Field
 from typing import Optional
 from jwt_manager import create_token
+=======
+from fastapi.responses import HTMLResponse
+>>>>>>> ea78abf818fb8e6811e0a5fafb85b9231627f78f
 
 app = FastAPI()
+app.title = 'Mi aplicacion FASTAPI'  
+@app.get('/', tags=['Home'])
 
+<<<<<<< HEAD
 # Modelo de usuario ##
 class User(BaseModel):
     email : str
@@ -76,3 +83,9 @@ def get_movie(id: int):
 def create_movie(movie: Movie) -> dict:
     movies.append(movie)
     return JSONResponse(content={"messages":"Se ha creado la pelicula"})
+=======
+
+def message():
+ 
+    return HTMLResponse("<h1>Esta es la pagina principal</h1>")
+>>>>>>> ea78abf818fb8e6811e0a5fafb85b9231627f78f
